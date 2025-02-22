@@ -9,4 +9,11 @@ void main(List<String> arguments){
   String author = "Ludwig Wittgenstein";
   String quote = "'When we can't think for ourselves, we can always quote'";
 print("$author, once said, $quote.");
+
+ String NureseryRyhme = "Eena, meena, mina, mo, Catch a mouse by the toe; If he squeals let him go, Eeena, meena, mina, mo.";
+ String Ryhme = NureseryRyhme.replaceAll(" ", "");
+ print(NureseryRyhme);
+ List<String> words = Ryhme.split(RegExp(r'(?=[A-Z])'));
+ print(words);
+
 }
