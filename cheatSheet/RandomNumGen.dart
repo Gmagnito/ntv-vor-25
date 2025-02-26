@@ -8,39 +8,31 @@ void main (List<String> arguments) {
   bool correct = false;
   while (correct == false) {
     print("Giskaðu á tölu sem er á bilinu einn uppí 100");
-    try{
+    try
       String gisk = stdin.readLineSync().toString();
-      if (input == null || input.isEmpty) {
+      if (gisk == null || gisk.isEmpty) {
         throw FormatException('Input cannot be empty.');
       }
       int? modgisk = int.tryParse(gisk);
 
-      int result = riskyOperation(modgisk);
 
-      print('The result is:$result');
-    } on FormatException {
-      print('Invalid input');
-    }
-
-
-
-    if (modgisk == randomNumber) {
+      if (modgisk == randomNumber) {
       correct = true;
       skipti = skipti + 1;
       print("Tilraun $skipti Þú giskaðir rétt");
-    }
-    else if(skipti == 9){
+      }
+      else if(skipti == 9){
       print("10 tilraunirnar eru búnar. Game Over!");
       return;
-    }
-    else if (modgisk! < randomNumber) {
-      skipti = skipti + 1;
-      print("Tilraun $skipti Hærra, Giskaðu aftur");
-    }
-    else if (modgisk! > randomNumber){
-      skipti = skipti + 1;
-      print("Tilraun $skipti Lægra , Giskaðu aftur");
-    }
+      }
+      else if (modgisk! < randomNumber) {
+        skipti = skipti + 1;
+        print("Tilraun $skipti Hærra, Giskaðu aftur");
+      }
+      else if (modgisk! > randomNumber){
+        skipti = skipti + 1;
+       print("Tilraun $skipti Lægra , Giskaðu aftur");
+      }
 
     }
   }
