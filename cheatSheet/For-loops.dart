@@ -22,5 +22,5 @@ void main(){
   }
   List numbs =[2,5,4,3,7,9,123,5,88,44];
 for(int numb in numbs){
-  if(numb)
+  if(numb
 }

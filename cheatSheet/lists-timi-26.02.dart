@@ -18,6 +18,9 @@ void main(){
   names.removeAt(0);
   print(names);
 
+  String min = names.first;
+  print(min);
+
 
 
 }
