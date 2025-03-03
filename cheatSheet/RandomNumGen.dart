@@ -12,7 +12,6 @@ void main (List<String> arguments) {
  print("Giskaðu á tölu sem er á bilinu einn uppí 1000,\n þú færð 10 tilraunir \n Gangi þér vel!");
  while (correct == false) {
 
-
     String gisk = stdin.readLineSync().toString();
     if (gisk == null || gisk.isEmpty) {
         throw FormatException('Input cannot be empty.');
